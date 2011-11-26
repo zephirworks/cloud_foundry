@@ -17,7 +17,12 @@
 # limitations under the License.
 #
 
-define :cloud_foundry_deploy, :target => "api.vcap.me", :trace => false, :mem_quota => 256, :enable_submodules => false, :cache_dir => "/var/cache/chef/git-checkout-cache" do
+define :cloud_foundry_deploy do
+  params[:target] ||= node[:cloud_foundry][:target]
+  params[:trace] ||= node[:cloud_foundry][:trace]
+  params[:mem_quota] ||= node[:cloud_foundry][:mem_quota]
+  params[:enable_submodules] ||= false
+  params[:cache_dir] ||= node[:cloud_foundry][:cache_dir]
   checkout_dir = "#{params[:cache_dir]}/#{params[:name]}"
 
   directory checkout_dir do
