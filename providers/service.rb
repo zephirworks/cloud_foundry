@@ -41,21 +41,6 @@ def load_current_resource
   @current_resource.admin_password(@new_resource.admin_password)
   @current_resource.trace(@new_resource.trace)
 
-  # begin
-  #   info = client.app_info(@new_resource.name)
-  #   puts info.inspect
-  # 
-  #   @current_resource.staging(info[:staging])
-  #   @current_resource.uris(info[:uris])
-  #   @current_resource.instances(info[:instances])
-  #   @current_resource.resources(info[:resources])
-  #   @current_resource.state(info[:state])
-  #   @current_resource.services(info[:services])
-  #   @current_resource.env(info[:env])
-  # rescue VMC::Client::NotFound
-  #   puts "not found"
-  # end
-
   @current_resource
 end
 
