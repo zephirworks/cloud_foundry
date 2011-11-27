@@ -1,7 +1,7 @@
 DESCRIPTION
 ===========
 
-A cookbook to manage applications and services on
+A Chef cookbook to manage applications and services on
 [Cloud Foundry](http://www.cloudfoundry.org/).
 It is designed to be compatible with any installation of CloudFoundry, whether
 [hosted](http://www.cloudfoundry.com/), self-hosted or based on 
@@ -130,7 +130,7 @@ names.
 cloud\_foundry\_deploy
 ----------------------
 
-The `cloud\_foundry\_deploy` definition builds upon the _cloud\_foundry_ LWRPs
+The `cloud_foundry_deploy` definition builds upon the _cloud\_foundry_ LWRPs
 to provide a drop-in replacement for _deploy\_revision_ to deploy an app to CF.
 
 It takes the same attributes as the _:update_ and _:upload_ actions of the
