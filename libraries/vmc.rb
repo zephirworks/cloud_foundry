@@ -15,7 +15,7 @@ module ZephirWorks
 
       def vmc_client(target, admin, password, trace = nil)
         if @client
-          if target == @target && admin == @admin && password = @password
+          if target == @target && admin == @admin && password == @password
             return @client
           else
             @client = nil
