@@ -23,8 +23,8 @@ module ZephirWorks
         end
 
         client = ::VMC::Client.new(target)
-        @token = client.login(admin, password)
         client.trace = trace if trace
+        @token = client.login(admin, password)
 
         @target = target
         @admin = admin
